@@ -11,10 +11,10 @@ Calendar Format Xpath
     [Tags]             commitment
     Appstate           Home
     ClickText          Do not consent
-    ClickText          //table[@id\='datepickers']//input[@id\='first_date_picker']
-    ClickText          //table[@class\='ui-datepicker-calendar']//a[text()\=10]
+    ClickText          //table[@id\='datepickers']//input[@id\='first_date_picker']     # click datepicker text box and populate the calender
+    ClickText          //table[@class\='ui-datepicker-calendar']//a[text()\=10]         # select the date from the table
     Sleep              10s
-    ${selectedMon}=    GetInputValue                    //input[@id\='first_date_picker']
+    ${selectedMon}=    GetInputValue               //input[@id\='first_date_picker']    # After selected the date , fetch the selected date from input field
     Sleep              10s
     Log                ${selectedMon}
     Sleep              10s
