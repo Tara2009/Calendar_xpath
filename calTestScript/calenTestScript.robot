@@ -13,7 +13,7 @@ Calendar Format Xpath
     ClickText          Do not consent
     ClickText          //table[@id\='datepickers']//input[@id\='first_date_picker']
     ClickText          //table[@class\='ui-datepicker-calendar']//a[text()\=10]
-    ${selectedMon}=    GetText                     //table[@id\='datepickers']//input[@id\='first_date_picker']
+    ${selectedMon}=    GetText                     //table[@id\='datepickers']
     Log                ${selectedMon}
 
 
