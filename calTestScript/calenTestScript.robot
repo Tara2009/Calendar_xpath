@@ -12,7 +12,8 @@ Calendar Format Xpath
     Appstate               Home
     ClickText              Do not consent
     UseTable               Su
-    ClickCell              //table[@class\='ui-datepicker-calendar']//a[text()\=10]
+    ClickCell              r3c3
+    #ClickCell              //table[@class\='ui-datepicker-calendar']//a[text()\=10]
     
 
     
