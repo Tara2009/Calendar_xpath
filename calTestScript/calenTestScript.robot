@@ -17,6 +17,7 @@ Calendar Format Xpath
     ${selectedMon}=    GetText                    //input[@id\='first_date_picker']
     Sleep              10s
     Log                ${selectedMon}
+    Sleep              10s
 
 
 
