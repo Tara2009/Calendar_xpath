@@ -11,9 +11,9 @@ Calendar Format Xpath
     [Tags]             commitment
     Appstate           Home
     ClickText          Do not consent
-    ClickText          //table[@id\='datepickers']//input[@id\='first_date_picker']
+    ClickText          //input[@id\='first_date_picker']      #//table[@id\='datepickers']//input[@id\='first_date_picker']
     ClickText          //table[@class\='ui-datepicker-calendar']//a[text()\=10]
-    ${selectedMon}=    GetText                    //input[@id\='first_date_picker']
+    ${selectedMon}=    GetText                    //input[@id='first_date_picker']
     Log                ${selectedMon}
 
 
