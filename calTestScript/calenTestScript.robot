@@ -11,7 +11,7 @@ Calendar Format Xpath
     [Tags]                 commitment
     Appstate               Home
     ClickText              Do not consent
-    ClickCell              //table[@class='ui-datepicker-calendar']//a[text()=10]
+    ClickCell              //table[@class\='ui-datepicker-calendar']//a[text()\=10]
     
 
     
