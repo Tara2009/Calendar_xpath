@@ -69,6 +69,6 @@ Third MonthAndYearDropdown Selection calender format Xpath
     #ClickText          //table[@class\='ui-datepicker-calendar']//a[text()\='${for30Day}']
     #${getdrselvalue}=                              GetInputValue               //input[@id='third_date_picker']
     #Log                'Get Month and Year selected values from Drop Down : ' ${getdrselvalue}
-    ${getmonth}=        Get Selected List Value        //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']                     
+    ${getmonth}=        Get selected                //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']
     Log                 ${getmonth}
     Sleep               3s
