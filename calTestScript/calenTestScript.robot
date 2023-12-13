@@ -45,9 +45,9 @@ Previous next current display calender format Xpath
     [Tags]              PrecurNextMonths
     [Documentation]     Get the months and year using Next and Previous Buttons
     ClickText           //table[@id\='datepickers']//input[@id\='second_date_picker']
+    ClickText           //a[@class\='ui-datepicker-next ui-corner-all']
+    Sleep               3s
     ClickText           //div[@class\='ui-datepicker-title']//span[text()\='${setMonth}']
     ${getmonth}=        GetText                     //div[@class\='ui-datepicker-title']//span[text()\='${setMonth}']
     Log                 'Get Prevoius Mont : ' ${getmonth}
-    Sleep               3s
-    ClickText        //a[@class\='ui-datepicker-next ui-corner-all']
     Sleep               3s
