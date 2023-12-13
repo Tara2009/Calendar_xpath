@@ -40,4 +40,7 @@ Previews Current Next Months display calendar format Xpath
     #Sleep               3s
     Log                 'Second Calender Value : ' ${selecteddate}
     Sleep               3s
-
+Previous next current display calender format Xpath
+    [Tags]    PrecurNextMonths
+    [Documentation]    Get the months and year using Next and Previous Buttons
+    ClickText           //table[@id\='datepickers']//input[@id\='second_date_picker']    
