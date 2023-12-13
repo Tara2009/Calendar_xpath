@@ -48,3 +48,4 @@ Previous next current display calender format Xpath
     ClickText           //div[@class\='ui-datepicker-title']//span[text()\='${setMonth}']
     ${getmonth}=        GetText                     //div[@class\='ui-datepicker-title']//span[text()\='${setMonth}']
     Log                 'Get Prevoius Mont : ' ${getmonth}
+    Sleep               3s
