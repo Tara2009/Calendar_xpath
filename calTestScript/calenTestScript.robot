@@ -11,7 +11,7 @@ Suite Teardown          End suite
 *** Variables ***
 ${for30Day}=            18
 ${for31Day}=            31
-${setMonth}=            December
+${setMonth}=            January
 
 
 *** Test Cases ***
