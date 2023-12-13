@@ -25,8 +25,8 @@ Current Month display Calendar Format Xpath
     Sleep               3s
     ${selectedMon}=     GetInputValue               //input[@id\='first_date_picker']                       # After selected the date , fetch the selected date from input field
     Sleep               3s
-    Log                 'First Calender Value :'+${selectedMon}
-    Sleep               3s
+    Log                 'First Calender Value : ' ${selectedMon}
+    #Sleep               3s
 
 Previews Current Next Months display calendar format Xpath
     [Tags]              PrecurNextMonths
@@ -34,8 +34,9 @@ Previews Current Next Months display calendar format Xpath
     #ClickText           Do not consent
     ClickText           //table[@id\='datepickers']//input[@id\='second_date_picker']
     ClickText           //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,' ui-datepicker-other-month '))]/a[text()\='${for31Day}']
-    Sleep               3s
+    #Sleep               3s
     ${selecteddate}=    GetInputValue               //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,' ui-datepicker-other-month '))]/a[text()\='${for31Day}']
-    Log                 'Second Calender Value :'+${selecteddate}
+    Sleep               3s
+    Log                 'Second Calender Value : ' ${selecteddate}
     Sleep               3s
 
