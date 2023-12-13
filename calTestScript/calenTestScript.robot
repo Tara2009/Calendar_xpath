@@ -63,7 +63,8 @@ Third MonthAndYearDropdown Selection calender format Xpath
     #ClickText                  select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']
     #Click Element               //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']
     #Select From List By Value                               //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']
-    PickList                    //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']        partial_match=true
+    #PickList                    //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']        partial_match=true
+    DropDown                    select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']           partial_match=true
     ClickText                   //select[@class\='ui-datepicker-year']//option[text()\='${DropYear}']
     ClickText                   //table[@class\='ui-datepicker-calendar']//a[text()\='${for30Day}']
     ${getdrselvalue}=           GetInputValue               //input[@id='third_date_picker']
