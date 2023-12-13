@@ -9,7 +9,7 @@ Suite Setup            Setup Browser
 Suite Teardown         End suite
 
 *** Variables ***
-${Day}= 20
+${Day}=      20
 Int Day1 = 20
 
 
