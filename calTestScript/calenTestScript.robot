@@ -58,11 +58,10 @@ Previous next current display calender format Xpath
 Third MonthAndYearDropdown Selection calender format Xpath
     [Tags]              PrecurNextMonths
     [Documentation]     Select Month and Year from Drop Down and get the dates
-    Appstate            Home
-    ClickText           //table[@id='datepickers']//input[@id='third_date_picker']
+    ClickText           //table[@id\='datepickers']//input[@id\='third_date_picker']
     ClickText           //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']
     ClickText           //select[@class\='ui-datepicker-year']//option[text()\='${DropYear}']
-    ClickText           //table[@class='ui-datepicker-calendar']//a[text()='${for30Day}']
+    ClickText           //table[@class\='ui-datepicker-calendar']//a[text()\='${for30Day}']
     ${getdrselvalue}=     GetInputValue         //input[@id='third_date_picker']
     Log                   'Get Month and Year selected values from Drop Down : ' ${getdrselvalue}
     Sleep                 3s
