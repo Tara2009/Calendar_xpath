@@ -34,6 +34,7 @@ Previews Current Next Months display calendar format Xpath
     #ClickText           Do not consent
     ClickText           //table[@id\='datepickers']//input[@id\='second_date_picker']
     ClickText           //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,' ui-datepicker-other-month '))]/a[text()\='${for31Day}']
+    Sleep               3s
     ${selecteddate}=    GetInputValue               //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,' ui-datepicker-other-month '))]/a[text()\='${for31Day}']
     Log                 'Second Calender Value :'+${selecteddate}
     Sleep               3s
