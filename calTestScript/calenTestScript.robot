@@ -12,6 +12,8 @@ Suite Teardown          End suite
 ${for30Day}=            18
 ${for31Day}=            31
 ${setMonth}=            January
+${DropMonth}=           Apr
+${DropYear}=            2015
 
 
 *** Test Cases ***
@@ -48,8 +50,19 @@ Previous next current display calender format Xpath
     ClickText           //table[@id\='datepickers']//input[@id\='second_date_picker']
     ClickText           //a[@class\='ui-datepicker-next ui-corner-all']
     Sleep               3s
-    #ClickText           //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for31Day}'] # //div[@class\='ui-datepicker-title']//span[text()\='${setMonth}']
-    ClickText            //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for31Day}']
-    ${getmonth}=        GetInputValue               //input[@id\='second_date_picker'] 
+    #ClickText          //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for31Day}'] # //div[@class\='ui-datepicker-title']//span[text()\='${setMonth}']
+    ClickText           //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for31Day}']
+    ${getmonth}=        GetInputValue               //input[@id\='second_date_picker']
     Log                 'Get Prevoius Mont : ' ${getmonth}
     Sleep               3s
+Third MonthAndYearDropdown Selection calender format Xpath
+    [Tags]              PrecurNextMonths
+    [Documentation]     Select Month and Year from Drop Down and get the dates
+    Appstate            Home
+    ClickText           //table[@id='datepickers']//input[@id='third_date_picker']
+    ClickText           //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']
+    ClickText           //select[@class\='ui-datepicker-year']//option[text()\='${DropYear}']
+    ClickText           //table[@class='ui-datepicker-calendar']//a[text()='${for30Day}']
+    ${getdrselvalue}=     GetInputValue         //input[@id='third_date_picker']
+    Log                   'Get Month and Year selected values from Drop Down : ' ${getdrselvalue}
+    Sleep                 3s
