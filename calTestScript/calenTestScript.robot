@@ -61,7 +61,7 @@ Third MonthAndYearDropdown Selection calender format Xpath
     [Documentation]     Select Month and Year from Drop Down and get the dates
     ClickText           //table[@id\='datepickers']//input[@id\='third_date_picker']
     # ClickText         //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']
-    ${selectmon}=       Get Selected List Label        //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']
+    ${selectmon}=       Get selected        //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']
     Log                 ${selectmon}
     ClickElement        //select[@class\='ui-datepicker-month']
     DropDown            Jan                 //option[text()\='${DropMonth}']                
