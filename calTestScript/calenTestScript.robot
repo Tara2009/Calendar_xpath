@@ -76,7 +76,7 @@ SetMonth using month and year dropdown selection calendar
     ClickText            //table[@id\='datepickers']//input[@id\='third_date_picker']
     DropDown             //select[@class\='ui-datepicker-month']                 ${DropMonth}
     DropDown             //select[@class\='ui-datepicker-year']                  ${DropYear}
-    ClickText            //table[@class='ui-datepicker-calendar']//a[text()='${for31Day}']
+    ClickText            //table[@class\='ui-datepicker-calendar']//a[text()\='${for31Day}']
     Sleep                3s
     ${setdrdrownval}=    GetInputValue               //input[@id\='third_date_picker']
     Log                  'Set DropDown values and fetch : ' ${setdrdrownval}
