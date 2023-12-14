@@ -81,6 +81,9 @@ SetMonth using month and year dropdown selection calendar
     ${setdrdrownval}=    GetInputValue               //input[@id\='third_date_picker']
     Log                  'Set DropDown values and fetch : ' ${setdrdrownval}
     Sleep                3s
-
+Set Month and Year in the dropdown and select only enable dates in the calendar
+    [Tags]            Setmonyear_enabledates_only
+    [Documentation]    Set Month and Year in the dropdown and set to allow select only enable dates in the calendar
+    ClickText          //table[@id='datepickers']//input[@id='fourth_date_picker']
 
 
