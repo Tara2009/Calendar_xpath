@@ -53,6 +53,7 @@ Next Date Selection and display calender format Xpath
     Sleep               3s
     #ClickText          //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for31Day}'] # //div[@class\='ui-datepicker-title']//span[text()\='${setMonth}']
     ClickText           //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for31Day}']
+    Sleep               5s
     ${getmonth}=        GetInputValue               //input[@id\='second_date_picker']
     Log                 'Get Prevoius Mont : ' ${getmonth}
     Sleep               3s
@@ -65,6 +66,7 @@ Previous Date Selection and display calender format Xpath
     Sleep               3s
     #ClickText          //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for31Day}'] # //div[@class\='ui-datepicker-title']//span[text()\='${setMonth}']
     ClickText           //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for30Day}']
+    Sleep               5s
     ${getmonth}=        GetInputValue               //input[@id\='second_date_picker']
     Log                 'Get Prevoius Mont : ' ${getmonth}
     Sleep               3s
