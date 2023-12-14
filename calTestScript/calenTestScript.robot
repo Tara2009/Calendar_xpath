@@ -74,6 +74,7 @@ SetMonth using month and year dropdown selection calendar
     [Tags]    setmonyeardropdown
     [Documentation]    Set the month and Year in the drop down and select the date from calendar
     ClickText          //table[@id\='datepickers']//input[@id\='third_date_picker']
+    DropDown           Jan        //div[@class='ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all']//div[@class='ui-datepicker-title']//select[@class='ui-datepicker-month']//option[text()='Mar']
     Sleep              3s
 
 
