@@ -78,6 +78,7 @@ SetMonth using month and year dropdown selection calendar
     #PickList           //div[@class\='ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all']//div[@class\='ui-datepicker-title']//select[@class\='ui-datepicker-month']//option[text()\='Mar']    anchor=3
     #DropDown           //select[@class\='ui-datepicker-month']                 //option[text()\='Mar']
     DropDown            //select[@class\='ui-datepicker-month']                 ${DropMonth}
+    DropDown            //select[@class\='ui-datepicker-year']                  ${DropYear}
     Sleep               3s
 
 
