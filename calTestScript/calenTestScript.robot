@@ -44,7 +44,7 @@ Previews Current Next Months display calendar format Xpath
     #Sleep              3s
     Log                 'Second Calender Value : ' ${selecteddate}
     Sleep               3s
-Previous next current display calender format Xpath
+Next Date Selection and display calender format Xpath
     [Tags]              PrecurNextMonths
     [Documentation]     Get the months and year using Next and Previous Buttons
     Appstate            Home
@@ -56,27 +56,19 @@ Previous next current display calender format Xpath
     ${getmonth}=        GetInputValue               //input[@id\='second_date_picker']
     Log                 'Get Prevoius Mont : ' ${getmonth}
     Sleep               3s
-Third MonthAndYearDropdown Selection calender format Xpath
+Previous Date Selection and display calender format Xpath
     [Tags]              PrecurNextMonths
-    [Documentation]     Select Month and Year from Drop Down and get the dates
-    ClickText           //table[@id\='datepickers']//input[@id\='third_date_picker']
-    # ClickText         //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']
-    ${selectmon}=       Get selected        //option[text()\='${DropMonth}']
-    Log                 ${selectmon}
-    ClickElement        //select[@class\='ui-datepicker-month']
-    DropDown            Jan                 //option[text()\='${DropMonth}']                
-    
-    # ClickText         //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']
-    #ClickText          select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']
-    #Click Element      //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']
-    #Select From List By Value                      //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']
-    #PickList           //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']             partial_match=true
-    #DropDown           //select[@class\='ui-datepicker-month']//option[text()\='${DropMonth}']             partial_match=true
-    #ClickText          //select[@class\='ui-datepicker-year']//option[text()\='${DropYear}']
-    #ClickText          //table[@class\='ui-datepicker-calendar']//a[text()\='${for30Day}']
-    #${getdrselvalue}=                              GetInputValue               //input[@id='third_date_picker']
-    #Log                'Get Month and Year selected values from Drop Down : ' ${getdrselvalue}
+    [Documentation]     Get the months and year using Next and Previous Buttons
+    Appstate            Home
+    ClickText           //table[@id\='datepickers']//input[@id\='second_date_picker']
+    ClickText           //a[@class\='ui-datepicker-prev ui-corner-all']
     Sleep               3s
+    #ClickText          //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for31Day}'] # //div[@class\='ui-datepicker-title']//span[text()\='${setMonth}']
+    ClickText           //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for30Day}']
+    ${getmonth}=        GetInputValue               //input[@id\='second_date_picker']
+    Log                 'Get Prevoius Mont : ' ${getmonth}
+    Sleep               3s
+
 
 
     
