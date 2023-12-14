@@ -54,7 +54,7 @@ Next Date Selection and display calender format Xpath
     #ClickText          //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for31Day}'] # //div[@class\='ui-datepicker-title']//span[text()\='${setMonth}']
     ClickText           //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for31Day}']
     Sleep               5s
-    ${getNextmonth}=        GetInputValue               //input[@id\='second_date_picker']
+    ${getNextmonth}=    GetInputValue               //input[@id\='second_date_picker']
     Log                 'Get Next Mont : ' ${getNextmonth}
     Sleep               3s
 Previous Date Selection and display calender format Xpath
@@ -66,16 +66,16 @@ Previous Date Selection and display calender format Xpath
     Sleep               3s
     ClickText           //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for30Day}']
     Sleep               5s
-    ${getpreMonth}=        GetInputValue               //input[@id\='second_date_picker']
+    ${getpreMonth}=     GetInputValue               //input[@id\='second_date_picker']
     Log                 'Get Prevoius Mont : ' ${getpreMonth}
     Sleep               3s
 
 SetMonth using month and year dropdown selection calendar
-    [Tags]    setmonyeardropdown
-    [Documentation]    Set the month and Year in the drop down and select the date from calendar
-    ClickText          //table[@id\='datepickers']//input[@id\='third_date_picker']
-    DropDown           Jan        //div[@class\='ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all']//div[@class\='ui-datepicker-title']//select[@class\='ui-datepicker-month']//option[text()\='Mar']
-    Sleep              3s
+    [Tags]              setmonyeardropdown
+    [Documentation]     Set the month and Year in the drop down and select the date from calendar
+    ClickText           //table[@id\='datepickers']//input[@id\='third_date_picker']
+    DropDown            Mar                         //div[@class\='ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all']//div[@class\='ui-datepicker-title']//select[@class\='ui-datepicker-month']//option[text()\='Mar']
+    Sleep               3s
 
 
-    
+
