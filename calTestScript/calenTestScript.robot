@@ -84,12 +84,12 @@ SetMonth using month and year dropdown selection calendar
 Set Month and Year in the dropdown and select only enable dates in the calendar
     [Tags]                      Setmonyear_enabledates_only
     [Documentation]             Set Month and Year in the dropdown and set to allow select only enable dates in the calendar
-    ClickText                   //table[@id='datepickers']//input[@id='fourth_date_picker']
+    ClickText                   //table[@id\='datepickers']//input[@id\='fourth_date_picker']
     DropDown                    //select[@class\='ui-datepicker-month']                 Jun
     DropDown                    //select[@class\='ui-datepicker-year']                  ${DropYear}
     ClickCell                   //table[@class\='ui-datepicker-calendar']//td[not(contains(@class ,' ui-datepicker-other-month '))]//a[text()\='5']
     Sleep                       3s
-    ${aftdrdownset_getenable}=                              GetInputValue               //input[@id='fourth_date_picker']
+    ${aftdrdownset_getenable}=                              GetInputValue               //input[@id\='fourth_date_picker']
     Log                         ${aftdrdownset_getenable}
     Sleep                       3s
 
