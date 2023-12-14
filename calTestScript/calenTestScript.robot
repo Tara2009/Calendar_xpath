@@ -73,7 +73,7 @@ Previous Date Selection and display calender format Xpath
 SetMonth using month and year dropdown selection calendar
     [Tags]    setmonyeardropdown
     [Documentation]    Set the month and Year in the drop down and select the date from calendar
-    ClickText          //table[@id='datepickers']//input[@id='third_date_picker']
+    ClickText          //table[@id\='datepickers']//input[@id\='third_date_picker']
     Sleep              3s
 
 
