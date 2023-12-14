@@ -4,7 +4,8 @@
 Resource                ../calResource/cal_Common.robot
 Library                 DateTime
 Library                 String
-Library                 SeleniumLibrary
+Library                 QWeb
+Library                 QForce
 Suite Setup             Setup Browser
 Suite Teardown          End suite
 
