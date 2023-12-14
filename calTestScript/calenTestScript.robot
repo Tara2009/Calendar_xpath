@@ -54,8 +54,8 @@ Next Date Selection and display calender format Xpath
     #ClickText          //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for31Day}'] # //div[@class\='ui-datepicker-title']//span[text()\='${setMonth}']
     ClickText           //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for31Day}']
     Sleep               5s
-    ${getmonth}=        GetInputValue               //input[@id\='second_date_picker']
-    Log                 'Get Prevoius Mont : ' ${getmonth}
+    ${getNextmonth}=        GetInputValue               //input[@id\='second_date_picker']
+    Log                 'Get Prevoius Mont : ' ${getNextmonth}
     Sleep               3s
 Previous Date Selection and display calender format Xpath
     [Tags]              PrecurNextMonths
@@ -64,11 +64,10 @@ Previous Date Selection and display calender format Xpath
     ClickText           //table[@id\='datepickers']//input[@id\='second_date_picker']
     ClickText           //a[@class\='ui-datepicker-prev ui-corner-all']
     Sleep               3s
-    #ClickText          //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for31Day}'] # //div[@class\='ui-datepicker-title']//span[text()\='${setMonth}']
     ClickText           //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month'))]//a[text()\='${for30Day}']
     Sleep               5s
-    ${getmonth}=        GetInputValue               //input[@id\='second_date_picker']
-    Log                 'Get Prevoius Mont : ' ${getmonth}
+    ${getpreMonth}=        GetInputValue               //input[@id\='second_date_picker']
+    Log                 'Get Prevoius Mont : ' ${getpreMonth}
     Sleep               3s
 
 
