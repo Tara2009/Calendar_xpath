@@ -87,7 +87,7 @@ Set Month and Year in the dropdown and select only enable dates in the calendar
     ClickText                   //table[@id\='datepickers']//input[@id\='fourth_date_picker']
     DropDown                    //select[@class\='ui-datepicker-month']                 Jun
     DropDown                    //select[@class\='ui-datepicker-year']                  ${DropYear}
-    ClickCell                   //table[@class\='ui-datepicker-calendar']//td[not(contains(@class ,' ui-datepicker-other-month '))]//a[text()\='5']
+    ClickText                   //table[@class\='ui-datepicker-calendar']//td[not(contains(@class ,' ui-datepicker-other-month '))]//a[text()\='5']
     Sleep                       3s
     ${aftdrdownset_getenable}=                              GetInputValue               //input[@id\='fourth_date_picker']
     Log                         ${aftdrdownset_getenable}
