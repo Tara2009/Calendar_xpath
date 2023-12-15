@@ -93,4 +93,13 @@ Set Month and Year in the dropdown and select only enable dates in the calendar
     Log                         ${aftdrdownset_getenable}
     Sleep                       3s
 
+Current Day plus ten days enable calendar format
+    [Tags]                      CurDayplusten
+    [Documentation]             Select a day from current day plus ten days enable calendar format
+    ClickText                   //table[@id\='datepickers']//input[@id\='fifth_date_picker']
+    ClickText                   //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-unselectable ui-state-disabled'))]//a[text()\='15']
+    Sleep                       3s
+    ${curplusten}=              GetInputValue               //input[@id\='fifth_date_picker']
+    Log                         ${curplusten}
+    Sleep                       3s
 
