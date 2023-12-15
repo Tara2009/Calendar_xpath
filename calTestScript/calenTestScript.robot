@@ -103,3 +103,8 @@ Current Day plus ten days enable calendar format
     Log                         'fifth Text Input : '${curplusten}
     Sleep                       3s
 
+Separate calendar with previousnext month calendar format
+    [Tags]        setmonyeardropdown
+    [Documentation]    Separate calendar with previousnext month selection calendar format, selected date will display in text box
+    ClickText          //img[@class\='ui-datepicker-trigger']
+    Sleep              10s
