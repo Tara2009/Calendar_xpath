@@ -107,7 +107,7 @@ Separate calendar with previousnext month calendar format
     [Tags]                      setmonyeardropdown
     [Documentation]             Separate calendar with previousnext month selection calendar format, selected date will display in text box
     ClickText                   //img[@class\='ui-datepicker-trigger']
-    ${getcalheader}=            GetText                     //div[@class='ui-datepicker-title']
+    ${getcalheader}=            GetText                     //div[@class\='ui-datepicker-title']
     Log                        'Sixth Text Box calendar title : ' ${getcalheader}
     ClickText                   //table[@class\='ui-datepicker-calendar']//td[not(contains(@class,'ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled'))]//a[text()\='${for30Day}']
     ${separatecale}=            GetInputValue               //input[@id\='sixth_date_picker']
